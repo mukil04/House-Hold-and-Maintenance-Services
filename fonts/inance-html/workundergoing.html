@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<h1>Our House Hold Work Under Going....</h1>
+
+
+<br><br>
+PLUMPING UNDER GOING WORK 
+<table id="customers">
+  <tr>
+     <th>Type of work</th>
+    <th>Work Name</th>
+    <th>Customer Name</th>
+	<th>Customer Area</th>
+    <th>Customer number</th>
+	<th>Employee Name </th>
+  </tr>
+ 
+ 
+				<?php
+				$conn = mysql_connect("localhost","root","");
+mysql_select_db("house",$conn);
+
+
+				$res = mysql_query("select * from workunder where worktype='Plumping'");
+				while($row = mysql_fetch_array($res))
+				{
+					$worktype = $row['worktype'];
+					$wname = $row['worktype'];
+					$clientname = $row['clientname'];
+					$clientarea = $row['clientarea'];
+					$amount = $row['amount'];
+					$empname = $row['empname'];
+					
+					echo "<tr><td>$worktype<td>$wname<td>$clientname <td>$clientarea <td>$amount <td>$empname </tr>";
+				}
+				?>
+				
+ 
+ 
+ 
+</table>
+<br
+
+
+<br><br>
+ELECTRICAL UNDER GOING WORK 
+<table id="customers">
+  <tr>
+    <th>Type of work</th>
+    <th>Work Name</th>
+    <th>Customer Name</th>
+	<th>Customer Area</th>
+    <th>Customer number</th>
+	<th>Employee Name </th>
+  </tr>
+ 
+ 
+				<?php
+				$conn = mysql_connect("localhost","root","");
+mysql_select_db("house",$conn);
+
+
+				$res = mysql_query("select * from workunder where worktype='electrical'");
+				while($row = mysql_fetch_array($res))
+				{
+					$worktype = $row['worktype'];
+					$wname = $row['worktype'];
+					$clientname = $row['clientname'];
+					$clientarea = $row['clientarea'];
+					$amount = $row['amount'];
+					$empname = $row['empname'];
+					
+					echo "<tr><td>$worktype<td>$wname<td>$clientname <td>$clientarea <td>$amount <td>$empname </tr>";
+				}
+				?>
+				
+ 
+ 
+ 
+</table>
+<br>
+</body>
+</html>
