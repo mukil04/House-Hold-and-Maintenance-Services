@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>plumbing service</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+    font-family: arial;
+	}
+		
+div{
+    margin-right: 10px;
+	}
+			
+td{
+    padding: 10px;
+	}
+
+h1{
+    color: red;
+	}
+    #head{
+	text-align: center;
+}
+.service {
+	width: 100%;
+	text-align: center;
+    cursor: pointer;
+    padding: 18px;
+    border:  2px solid #A020F0;
+    transition: 0.4s;
+	font-size: 30px; 
+  }
+  .active, .service:hover{
+    background-color: #A020F0;
+  }
+  .discription {
+    display: none;
+    padding: 12px 8px;
+	border: 10px solid #A020F0;
+    background-color: white;
+	color:black;
+    overflow: hidden;
+    margin-right: 0px;;
+  }
+
+  .discription p {
+	color: black;
+  }
+		
+</style> 
+</head>
+<body>
+<div style="background-color: lightblue;">
+
+					<h1 style="text-align: center; padding: 10px; font-family: cursive;">Plumbing services from ITACHI</h1><br>
+					
+			 
+			<div style="display: flex; flex-direction: row; align-items: center;" >
+			 <img src="images/logo2.png" alt="">
+			 <p style="font-family: fantasy; text-align: justify">ITACHI The three main types of plumbing systems installed in residential and commercial buildings are potable, sanitary, and stormwater systems. Each one has a unique function and purpose required to keep water flowing smoothly. Take a more in-depth look at how each type of plumbing system operates.Plumbers are responsible for installing pipes, valves, and fittings in commercial or residential structures to ensure everything operates smoothly. In addition, plumbers analyze plumbing emergencies when necessary, fixing them if possible.The three main types of plumbing systems include potable, sanitary and stormwater. Each system has its main function but ultimately brings water to a building and removes it and waste from it. Potable brings in water, sanitary removes wastage and stormwater transfers rainwater from the building. </p>	
+			 </div>
+			 </div>
+			    
+
+		
+<form name="form" action="postplum.php" method="post">  
+<center><h1>Plumbing service</h1></center>
+
+<br>
+
+<br><br>
+<!--<center>
+<table border=2 width=70%>
+<tr>
+<th>SL. No
+<th>Worker Name
+<th>Address
+</tr>
+
+<tr>
+<td>1
+<td>gopi
+<td>Paramakudi
+
+</tr>
+
+<tr>
+<td>2
+<td>sudhakar
+<td>Kamuthi
+
+</tr>
+
+<tr>
+<td>3
+<td>paramesh
+<td>Emaneshwaram
+
+</tr>
+
+<tr>
+<td>4
+<td>karnan
+<td>Parthibanur
+
+</tr>
+
+<tr>
+<td>5
+<td>vijikaran
+<td>Nayinarkovil
+</tr>-->
+
+
+
+
+
+</table>
+<br><br>
+
+<div style="text-align:center;">
+    <button class="service">Residential plumbing services</button>
+    <div class="discription">
+      <p>Plumbing problems in your house can be brought on by obstructions in the drains, sewer line damage, and a lack of clean water. The most frequent home service is pipe installation and repair. Outdoor and interior domestic plumbing, drainage system alterations, and gas plumbing are among the numerous sorts of home services.The three main types of plumbing systems include potable, sanitary and stormwater. Each system has its main function but ultimately brings water to a building and removes it and waste from it. Potable brings in water, sanitary removes wastage and stormwater transfers rainwater from the building</p>
+  </div>
+    
+    <button class="service">Commercial plumbing services</button>
+    <div class="discription">
+      <p>The techniques used in commercial plumbing services include those for clearing out material that clogs and stops pipes. Fungus, tree branches, debris, and food leftovers are a few of the items that prevent proper mobility. Plumbers use cutting-edge equipment like hydro jetting devices to remove the impediment. Black iron pipes are frequently used in establishments like hotels in order to encourage lucrative trade.</p>
+    </div>
+
+    <button class="service">Emergency plumbing services</button>
+    <div class="discription">
+      <p>As the name suggests, these services are available 24/7 for unexpected plumbing emergencies, such as burst pipes or clogged drains. Emergency plumbing services are designed to resolve plumbing problems quickly and efficiently to minimise damage and downtime.</p>
+    </div>
+
+    <button class="service">Leak Detection and Repair</button>
+    <div class="discription">
+      <p>From damaged seals to broken pipes, corroded fixtures, or high water pressure, there are many reasons for leaks to occur. The worst part is that you may not even be aware of them for long periods. They have the potential to waste hundreds of gallons of water, which hike up your water bill.</p>
+    </div>
+
+    <button class="service">Water Heater Service</button>
+    <div class="discription">
+      <p>This is one of the most common emergency calls that plumbers usually receive now and then. When cold weather is taking over, you would never want to find out that your water heater is broken. But then it does happen. Check if the plumbing company you asked for repair services provide water heater installations. It is also desirable to ask about any suggestions to the plumbers about the best water heater.</p>
+    </div>
+
+    <button class="service">Garbage Disposal Repair and Replacement</button>
+    <div class="discription">
+      <p>When garbage disposals become worn from overusing, plumber services may require to install new ones or perhaps repair the spotted damaged areas over existing disposal. The repairs for severely damaged disposal can able to include replacing broken fittings or parts. Even replacing the entire unit is also necessary.</p>
+    </div>
+
+</div>
+
+
+</table>
+<br><br>
+<center>
+<h1> Select Our Proposal Option : <select name="proposal"><option> --- </option> 
+<option>Residential plumbing services</option>
+<option>Leak Detection and Repair</option>
+<option>Water Heater Service</option>
+<option>Garbage Disposal Repair and Replacement</option>
+</select> </h1><br>
+
+<input type="hidden" name="type" value="plumbing">
+
+<input type="submit" name="submit" Value="Select Option">
+<br><br><br>
+	<br>
+	<center> <a href="index.html"> Click Here Back </a> 
+	<br><br><br>
+
+
+    <script>
+
+        var acc = document.getElementsByClassName("service");
+        
+        for (let i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var discription = this.nextElementSibling;
+                if (discription.style.display === "block") {
+                    discription.style.display = "none";
+                } else {
+                    discription.style.display = "block";
+                }
+            });
+        }
+        
+        
+        </script>
+        
+</body>
+</html>
